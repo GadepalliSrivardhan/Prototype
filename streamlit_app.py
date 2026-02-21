@@ -1,5 +1,5 @@
 """
-Uniform Store – Chat Prototype
+Taara's – Chat Prototype
 Streamlit entry point for deployment on Streamlit Cloud.
 Embeds the existing HTML/CSS/JS app in an iframe.
 """
@@ -34,12 +34,12 @@ def load_app_html() -> str:
 
 
 st.set_page_config(
-    page_title="Uniform Store – Chat Prototype",
+    page_title="Taara's – Chat Prototype",
     page_icon="🛒",
     layout="centered",
 )
 
-st.title("Uniform Store")
+st.title("Taara's")
 st.caption("Interactive chat prototype – select school, class, gender, choose uniform, and complete the flow.")
 
 html = load_app_html()

@@ -91,7 +91,7 @@
 
   function initWelcome() {
     addMessage('user', 'Hi');
-    addMessage('bot', 'Hello! Welcome to Uniform Store. Please select your details to get started.');
+    addMessage('bot', "Hello! Welcome to Taara's. Please select your details to get started.");
     addMessage('bot', 'Please choose your School, Class, and Gender:');
     clearQuickReplies();
     addQuickButton('Select School', icons.building, () => openModal('modalSchool'));

@@ -1,4 +1,4 @@
-# Uniform Store prototype - run locally and open browser
+# Taara's prototype - run locally and open browser
 $port = 3000
 $root = $PSScriptRoot
 
