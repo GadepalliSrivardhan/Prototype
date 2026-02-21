@@ -40,7 +40,6 @@ st.set_page_config(
 )
 
 st.title("Taara's")
-st.caption("Interactive chat prototype – select school, class, gender, choose uniform, and complete the flow.")
 
 html = load_app_html()
 st.components.v1.html(html, height=720, scrolling=True)
