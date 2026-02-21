@@ -104,17 +104,23 @@
     state.showedUniformChoice = true;
     addMessage('bot', 'Great! Please choose a uniform.');
     clearQuickReplies();
-    addQuickButton('Boys Shirt', icons.shirt, () => selectProduct('Boys Shirt'));
-    addQuickButton('Boys Shorts', icons.shorts, () => selectProduct('Boys Shorts'));
+    if (state.gender === 'Girl') {
+      addQuickButton('Girls Shirt', icons.shirt, () => selectProduct('Girls Shirt'));
+      addQuickButton('Girls Skirt', icons.shorts, () => selectProduct('Girls Skirt'));
+    } else {
+      addQuickButton('Boys Shirt', icons.shirt, () => selectProduct('Boys Shirt'));
+      addQuickButton('Boys Shorts', icons.shorts, () => selectProduct('Boys Shorts'));
+    }
   }
 
   function selectProduct(name) {
     state.product = name;
     addMessage('user', name);
     addMessage('bot', 'Great! Please choose a uniform:');
+    const imgText = name.replace(/\s/g, '+');
     const productHTML = `
       <div class="product-card">
-        <img src="https://placehold.co/260x200/e8e8e8/666?text=School+Shirt" alt="Uniform" />
+        <img src="https://placehold.co/260x200/e8e8e8/666?text=${imgText}" alt="Uniform" />
         <div class="details">
           <div class="product-qty">
             <label>Qty:</label>
@@ -146,9 +152,10 @@
     state.size = size;
     closeModals();
     addMessage('bot', 'Please enter your address.');
+    const summaryImgText = state.product.replace(/\s/g, '+');
     const summaryHTML = `
       <div class="product-card">
-        <img src="https://placehold.co/260x200/e8e8e8/666?text=School+Shirt" alt="Uniform" />
+        <img src="https://placehold.co/260x200/e8e8e8/666?text=${summaryImgText}" alt="Uniform" />
         <div class="details">
           <div class="label">Selected: ${state.product}</div>
           <div class="value">Size: ${state.size}</div>
