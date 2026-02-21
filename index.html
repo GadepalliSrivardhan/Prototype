@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uniform Store – Chat Prototype</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="chat-header">
+      <div class="header-avatar">U</div>
+      <div class="header-info">
+        <h1>Uniform Store</h1>
+        <span class="status">Online</span>
+      </div>
+    </header>
+
+    <main class="chat-main">
+      <div id="messages" class="messages">
+        <!-- Messages injected by JS -->
+      </div>
+    </main>
+
+    <footer class="chat-footer">
+      <input type="text" id="addressInput" class="address-input hidden" placeholder="Enter your address..." />
+      <div id="quickReplies" class="quick-replies"></div>
+    </footer>
+  </div>
+
+  <!-- Modal for School selection -->
+  <div id="modalSchool" class="modal hidden">
+    <div class="modal-content">
+      <h3>Select School</h3>
+      <button class="modal-option" data-value="Greenwood High">Greenwood High</button>
+      <button class="modal-option" data-value="Riverside Academy">Riverside Academy</button>
+      <button class="modal-option" data-value="Sunrise School">Sunrise School</button>
+      <button class="modal-close">Cancel</button>
+    </div>
+  </div>
+
+  <!-- Modal for Class selection -->
+  <div id="modalClass" class="modal hidden">
+    <div class="modal-content">
+      <h3>Select Class</h3>
+      <button class="modal-option" data-value="Grade 4">Grade 4</button>
+      <button class="modal-option" data-value="Grade 5">Grade 5</button>
+      <button class="modal-option" data-value="Grade 6">Grade 6</button>
+      <button class="modal-close">Cancel</button>
+    </div>
+  </div>
+
+  <!-- Modal for Gender selection -->
+  <div id="modalGender" class="modal hidden">
+    <div class="modal-content">
+      <h3>Select Gender</h3>
+      <button class="modal-option" data-value="Boy">Boy</button>
+      <button class="modal-option" data-value="Girl">Girl</button>
+      <button class="modal-close">Cancel</button>
+    </div>
+  </div>
+
+  <!-- Modal for Size selection -->
+  <div id="modalSize" class="modal hidden">
+    <div class="modal-content">
+      <h3>Select Size</h3>
+      <button class="modal-option" data-value="9-10 Years">9-10 Years</button>
+      <button class="modal-option" data-value="11-12 Years">11-12 Years</button>
+      <button class="modal-option" data-value="13-14 Years">13-14 Years</button>
+      <button class="modal-close">Cancel</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
